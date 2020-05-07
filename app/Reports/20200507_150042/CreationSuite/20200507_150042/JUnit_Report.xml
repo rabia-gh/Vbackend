@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="CreationSuite" time="1.747" tests="1" failures="0" errors="0">
+   <testsuite name="CreationSuite" tests="1" failures="0" errors="0" time="1.747" timestamp="2020-05-07 15:00:47" hostname="root - localhost" id="Test Suites/CreationSuite">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="/root/Katalon Studio/Prototype_KanbanApis/Reports/20200507_150042/CreationSuite/20200507_150042"/>
+         <property name="logFiles" value="/root/Katalon Studio/Prototype_KanbanApis/Reports/20200507_150042/CreationSuite/20200507_150042/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="root - localhost"/>
+         <property name="hostAddress" value="127.0.0.1"/>
+         <property name="os" value="Linux 64bit"/>
+         <property name="katalonVersion" value="7.4.0.1"/>
+      </properties>
+      <testcase name="Test Cases/KanbanApis/ListOfAllKanban" time="1.357" classname="Test Cases/KanbanApis/ListOfAllKanban" status="PASSED">
+         <system-out><![CDATA[2020-05-07 15:00:47 - [TEST_CASE][PASSED] - Test Cases/KanbanApis/ListOfAllKanban: Test Cases/KanbanApis/ListOfAllKanban
+
+2020-05-07 15:00:47 - [TEST_STEP][PASSED] - sendRequest(findTestObject("getAllKanbansUsingGET")): Send request successfully
+
+2020-05-07 15:00:48 - [MESSAGE][INFO] - HAR: /root/Katalon Studio/Prototype_KanbanApis/Reports/20200507_150042/CreationSuite/20200507_150042/requests/main/0.har
+
+2020-05-07 15:00:49 - [MESSAGE][PASSED] - Send request successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2020-05-07 15:00:47 - [TEST_SUITE][PASSED] - CreationSuite: Test Cases/KanbanApis/ListOfAllKanban]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

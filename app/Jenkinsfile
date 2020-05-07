@@ -1,0 +1,49 @@
+pipeline {
+ agent any
+ environment {
+     mvnHome = tool name: 'maven', type: 'maven'
+     mvnCMD = "${mvnHome}/bin/mvn"
+     }
+ options {
+ skipDefaultCheckout()
+ }
+ stages {
+  stage('SCM') {
+   steps {
+    checkout scm
+   }
+  }
+  stage('Compile & package') {
+        steps {
+              sh '${mvnCMD} clean package'
+          }
+          }
+stage('Unit Tests') {
+    steps {
+     sh '${mvnCMD} test'
+   }
+   post {
+    always {
+     junit 'target/surefire-reports/**/*.xml'
+    }
+   }
+  }
+  stage('Code Quality inspection'){
+    steps { 
+     sh "${mvnCMD} sonar:sonar"
+   }
+    }
+ stage('Build Docker Image'){
+    steps { 
+    //sh 'docker build -t 172.17.0.2:8083/demo:2.0.0 .'
+    sh 'docker build -t 192.168.1.69:8083/demo:1.0.0 .'
+   }
+   }
+   stage('Push Docker Image'){
+    steps { 
+     sh "docker login -u admin -p admin 192.168.1.69:8083" 
+     sh 'docker push 192.168.1.69:8083/demo:1.0.0'
+     }
+   }
+    }
+ }
