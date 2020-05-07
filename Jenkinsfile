@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'cd "$(pwd)"/app'
-                sh 'pwd'
+                sh 'ls'
                 
             }
         }
