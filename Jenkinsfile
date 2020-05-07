@@ -4,7 +4,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'pwd'
-                sh 'cd app'
+                sh 'cd "$(pwd)"/app'
                 sh 'pwd'
                 
             }
