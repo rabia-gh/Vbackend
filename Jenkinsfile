@@ -4,6 +4,9 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'pwd'
+                sh 'cd app'
+                sh 'pwd'
+                
             }
         }
     }
